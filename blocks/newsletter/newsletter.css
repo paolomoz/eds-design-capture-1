@@ -1,0 +1,112 @@
+/*
+ * Newsletter Block
+ * Email signup section
+ */
+
+.newsletter {
+  padding: 60px 16px;
+  background: var(--text-color);
+  color: var(--background-color);
+}
+
+.newsletter-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-content {
+  margin-bottom: 32px;
+}
+
+.newsletter-heading {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--background-color);
+}
+
+.newsletter-description {
+  font-size: var(--body-font-size-m);
+  margin: 0;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  width: 100%;
+}
+
+.newsletter-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: var(--body-font-size-s);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--background-color);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-button {
+  padding: 16px 32px;
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  background: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablet and up */
+@media (min-width: 600px) {
+  .newsletter {
+    padding: 80px 24px;
+  }
+
+  .newsletter-input-wrapper {
+    flex-direction: row;
+  }
+
+  .newsletter-input {
+    flex: 1;
+  }
+
+  .newsletter-button {
+    flex-shrink: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .newsletter {
+    padding: 100px 32px;
+  }
+
+  .newsletter-heading {
+    font-size: var(--heading-font-size-xl);
+  }
+}

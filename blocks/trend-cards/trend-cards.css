@@ -1,0 +1,94 @@
+/*
+ * Trend Cards Block
+ * 3-column grid of trend/category cards
+ */
+
+.trend-cards {
+  padding: 40px 16px;
+}
+
+.trend-cards.block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trend-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--light-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trend-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.trend-card-image {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.trend-card-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.trend-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.trend-card:hover .trend-card-image img {
+  transform: scale(1.05);
+}
+
+.trend-card-content {
+  padding: 20px;
+}
+
+.trend-card-title {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-m);
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--text-color);
+}
+
+.trend-card-description {
+  font-size: var(--body-font-size-s);
+  color: var(--dark-color);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .trend-cards {
+    padding: 60px 24px;
+  }
+
+  .trend-cards.block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .trend-cards {
+    padding: 80px 32px;
+  }
+
+  .trend-cards.block {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
